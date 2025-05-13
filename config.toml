@@ -20,22 +20,37 @@ title = "Bösger Consulting"
   contact = "https://www.linkedin.com/in/phillip-boesger-90691215a/"
 
 [params.homepage.resume]
-  skills = ["Visual Design", "Product Development"]
+  skills = ["Fullstack Development (Java + Web)", "Polarion Tool and Process Expert", "GitHub & CI/CD", "GenAI, AI Assistent & Automation", "Interface development and connection"]
 
 [[params.homepage.resume.work]]
-  name = "Google"
-  role = "Product Engineer"
-  duration = "Nov 2019 - Apr 2021"
+  name = "avasis"
+  role = "Senior Software Developer"
+  duration = "Mar 2024 - Dez 2025"
 
 [[params.homepage.resume.work]]
-  name = "Amazon"
-  role = "Sr. UX Designer"
-  duration = "Jan 2016 - Oct 2019"
+  name = "avasis"
+  role = "Technical Developement Lead Polarion"
+  duration = "May 2022 - Mar 2024"
+
+[[params.homepage.resume.work]]
+  name = "avasis"
+  role = "ALM Consultant"
+  duration = "Nov 2020 - May 2022"
+
+[[params.homepage.resume.work]]
+  name = "Atos"
+  role = "PLM Consultant"
+  duration = "Sep 2018 - Oct 2020"
 
 [[params.homepage.resume.courses]]
-  name = "Design Principles"
-  provider = "UX Academy"
-  duration = "Nov 2019 - Jan 2020"
+  name = "Professional Scrum Master I"
+  provider = "Scrum.org"
+[[params.homepage.resume.courses]]
+  name = "Professional Scrum Product Owner I"
+  provider = "Scrum.org"
+[[params.homepage.resume.courses]]
+  name = "ITIL Foundation certificate in IT Service Management"
+  provider = "APMG International"
 
 [params.homepage.social]
   linkedin = "https://www.linkedin.com/in/phillip-boesger-90691215a/"
