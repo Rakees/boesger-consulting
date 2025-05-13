@@ -9,7 +9,7 @@ title = "Bösger Consulting"
   description = "IT expert to take you further in the web and AI age"
   author = "Phillip Bösger"
   authorEmail = "consulting@boesger.com"
-  authorImage = "/iamges/photo.jpg"
+  authorImage = "/images/photo.jpg"
   autoDarkMode = true
   favicon = "favicon.ico"
 
