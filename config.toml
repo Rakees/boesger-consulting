@@ -1,29 +1,23 @@
 theme = "showfolio"
 languageCode = "en-us"
-baseurl = "https://example.com"
-title = "Showfolio Theme"
+baseurl = "https://consulting.boesger.com"
+title = "Bösger Consulting"
 
 
 [params]
-  name = "Showfolio Theme"
-  description = "Modern portfolio theme for your Hugo site."
-  author = "John Doe"
-  authorEmail = "name@example.com"
-  authorImage = "/photo.png"
+  name = "Bösger Consulting"
+  description = "IT expert to take you further in the web and AI age"
+  author = "Phillip Bösger"
+  authorEmail = "consulting@boesger.com"
+  authorImage = "/iamges/photo.jpg"
   autoDarkMode = true
-
-  copyright = "Copyright © 2021 - John Doe · All rights reserved"
   favicon = "favicon.ico"
 
 [params.homepage]
-  title = "Hey 👋 I'm John Doe"
-  tagline = "UX Designer and Product Lead"
-  description = "Develop functional user interfaces and provide a valuable experience to customers."
-  contact = "https://twitter.com/"
-
-[params.homepage.codepen]
-  username = "apvarun"
-  pens = ["MQaRKL", "RxodrP", "BmXGdm", "wdVypQ"]
+  title = "Hey 👋 I'm Phillip"
+  tagline = "Software Developer, Polarion Expert & AI Enthusiast"
+  description = "Bringing innovative solutions into your business."
+  contact = "https://www.linkedin.com/in/phillip-boesger-90691215a/"
 
 [params.homepage.resume]
   skills = ["Visual Design", "Product Development"]
@@ -44,12 +38,8 @@ title = "Showfolio Theme"
   duration = "Nov 2019 - Jan 2020"
 
 [params.homepage.social]
-  twitter = "https://twitter.com/"
-  linkedin = "https://linkedin.com/in/"
-  github = "https://github.com/"
-  medium = "https://medium.com/"
-  reddit = "https://reddit.com/"
-  dribbble = "https://dribbble.com/"
+  linkedin = "https://www.linkedin.com/in/phillip-boesger-90691215a/"
+  github = "https://github.com/Rakees"
 
 [build]
   writeStats = true
