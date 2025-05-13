@@ -20,7 +20,7 @@ title = "Bösger Consulting"
   contact = "https://www.linkedin.com/in/phillip-boesger-90691215a/"
 
 [params.homepage.resume]
-  skills = ["Fullstack Development (Java + Web)", "Polarion Tool and Process Expert", "GitHub & CI/CD", "GenAI, AI Assistent & Automation", "Interface development and connection"]
+  skills = ["GitHub & CI/CD", "Polarion Tool and Process Expert", "GenAI, AI Assistent & Automation", "Fullstack Development (Java + Web)", "Interface development and connection"]
 
 [[params.homepage.resume.work]]
   name = "avasis"
