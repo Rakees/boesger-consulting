@@ -4,6 +4,7 @@
       "a",
       "body",
       "br",
+      "button",
       "circle",
       "div",
       "footer",
@@ -23,6 +24,7 @@
       "rect",
       "script",
       "section",
+      "style",
       "svg",
       "title",
       "ul"
@@ -60,10 +62,12 @@
       "hover:border-gray-800",
       "hover:text-blue-ª00",
       "hover:text-gray-800",
+      "image-container",
       "inline-block",
       "items-center",
       "justify-between",
       "justify-center",
+      "left-0",
       "left-1/2",
       "lg:mx-24",
       "max-w-2xl",
@@ -97,7 +101,10 @@
       "px-6",
       "py-4",
       "relative",
+      "right-0",
       "rounded-full",
+      "scrollbar-hide",
+      "shadow-md",
       "sm:mt-16",
       "space-x-2",
       "space-x-4",
@@ -114,6 +121,7 @@
       "text-gray-500",
       "text-lg",
       "text-red-300",
+      "text-sm",
       "text-white",
       "text-xl",
       "text-xs",
@@ -124,10 +132,14 @@
       "w-48",
       "w-auto",
       "w-full",
-      "z-0"
+      "z-0",
+      "z-10"
     ],
     "ids": [
-      "nav-menu"
+      "courses",
+      "nav-menu",
+      "skills",
+      "work"
     ]
   }
 }

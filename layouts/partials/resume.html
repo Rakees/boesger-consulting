@@ -1,45 +1,132 @@
 <section class="my-4 max-w-5xl mx-auto">
-  <div class="text-3xl font-bold mb-8">Resume</div>
-
   <div class="space-y-8">
     <!-- Working Experience -->
     <div>
       <div class="text-2xl font-semibold mb-4">Working Experience</div>
-      <div class="flex overflow-x-auto space-x-4">
-        {{ range .Site.Params.homepage.resume.work}}
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">{{.name}}</div>
-          <p class="my-1 font-light">{{.role}}</p>
-          <p class="text-gray-500 my-1">{{.duration}}</p>
+      <div class="relative flex items-center">
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('work')">&#9664;</button>
+        <div id="work" class="flex overflow-x-auto space-x-4 scrollbar-hide w-full justify-center">
+          {{ range .Site.Params.homepage.resume.work }}
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="{{.logo}}" alt="{{.name}} Logo">
+            </div>
+            <p class="my-1 font-bold text-lg">{{.role}}</p>
+            <p class="my-1 font-light text-sm" v-if=".role2">{{.role2}}</p>
+            <p class="my-1 font-light text-sm" v-if=".role3">{{.role3}}</p>
+            <p class="text-gray-500 my-1">{{.duration}}</p>
+          </div>
+          {{ end }}
         </div>
-        {{ end }}
+        <button class="absolute right-0 z-10 p-2 shadow-md" onclick="scrollRight('work')">&#9654;</button>
       </div>
     </div>
 
     <!-- Skills -->
     <div>
-      <div class="text-2xl font-semibold mb-4">Skills</div>
-      <div class="flex overflow-x-auto space-x-4">
-        {{ range .Site.Params.homepage.resume.skills}}
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-light my-2">{{.}}</div>
+      <div class="text-2xl font-semibold mb-4">Skills & Tools</div>
+      <div class="relative flex items-center">
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('skills')">&#9664;</button>
+        <div id="skills" class="flex overflow-x-auto space-x-4 scrollbar-hide">
+          {{ range .Site.Params.homepage.resume.skills }}
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="{{.image}}" alt="{{.name}} Image">
+            </div>
+            <div class="text-xl font-bold my-2">{{.name}}</div>
+            <p class="my-1 font-light text-sm" v-if=".description">{{.description}}</p>
+          </div>
+          {{ end }}
         </div>
-        {{end}}
+        <button class="absolute right-0 z-10 p-2 shadow-md" onclick="scrollRight('skills')">&#9654;</button>
       </div>
     </div>
 
     <!-- Courses -->
     <div>
       <div class="text-2xl font-semibold mb-4">Courses</div>
-      <div class="flex overflow-x-auto space-x-4">
-        {{ range .Site.Params.homepage.resume.courses}}
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">{{.name}}</div>
-          <p class="my-1 font-light">by {{.provider}}</p>
-          <p class="text-gray-500 my-1">{{.duration}}</p>
+      <div class="relative flex items-center">
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('courses')">&#9664;</button>
+        <div id="courses" class="flex overflow-x-auto space-x-4 scrollbar-hide">
+          {{ range .Site.Params.homepage.resume.courses }}
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="{{.image}}" alt="{{.name}} Image">
+            </div>
+            <div class="text-xl font-bold my-2">{{.name}}</div>
+            <p class="my-1 font-light text-sm">by {{.provider}}</p>
+          </div>
+          {{ end }}
         </div>
-        {{ end }}
+        <button class="absolute right-0 z-10 p-2 shadow-md" onclick="scrollRight('courses')">&#9654;</button>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  function scrollLeft(id) {
+    const container = document.getElementById(id);
+    const firstChildWidth = container.children[0]?.offsetWidth || 0;
+    container.scrollBy({ left: -firstChildWidth, behavior: 'smooth' });
+
+    // If at the start, loop to the end
+    if (container.scrollLeft === 0) {
+      container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+    }
+  }
+
+  function scrollRight(id) {
+    const container = document.getElementById(id);
+    const firstChildWidth = container.children[0]?.offsetWidth || 0;
+    container.scrollBy({ left: firstChildWidth, behavior: 'smooth' });
+
+    // If at the end, loop to the start
+    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    ['work', 'skills', 'courses'].forEach(id => {
+      const container = document.getElementById(id);
+      const items = container.children;
+      if (items.length <= 3) {
+        container.previousElementSibling.style.display = 'none'; // Hide left button
+        container.nextElementSibling.style.display = 'none'; // Hide right button
+      }
+    });
+  });
+</script>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .image-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional: Background color for non-square images */
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>

@@ -84,96 +84,211 @@
     to me</a>
   
 </section><section class="my-4 max-w-5xl mx-auto">
-  <div class="text-3xl font-bold mb-8">Resume</div>
-
   <div class="space-y-8">
     
     <div>
       <div class="text-2xl font-semibold mb-4">Working Experience</div>
-      <div class="flex overflow-x-auto space-x-4">
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">avasis</div>
-          <p class="my-1 font-light">Senior Software Developer</p>
-          <p class="text-gray-500 my-1">Mar 2024 - Dez 2025</p>
+      <div class="relative flex items-center">
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('work')">&#9664;</button>
+        <div id="work" class="flex overflow-x-auto space-x-4 scrollbar-hide w-full justify-center">
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/avasis-logo.svg" alt="avasis Logo">
+            </div>
+            <p class="my-1 font-bold text-lg">Senior Software Developer</p>
+            <p class="my-1 font-light text-sm" v-if=".role2">Technical Developement Lead Polarion</p>
+            <p class="my-1 font-light text-sm" v-if=".role3">ALM Consultant</p>
+            <p class="text-gray-500 my-1">Nov 2020 - Dez 2025</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/atos-logo.png" alt="Atos Logo">
+            </div>
+            <p class="my-1 font-bold text-lg">PLM Consultant</p>
+            <p class="my-1 font-light text-sm" v-if=".role2"></p>
+            <p class="my-1 font-light text-sm" v-if=".role3"></p>
+            <p class="text-gray-500 my-1">Sep 2018 - Oct 2020</p>
+          </div>
+          
         </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">avasis</div>
-          <p class="my-1 font-light">Technical Developement Lead Polarion</p>
-          <p class="text-gray-500 my-1">May 2022 - Mar 2024</p>
-        </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">avasis</div>
-          <p class="my-1 font-light">ALM Consultant</p>
-          <p class="text-gray-500 my-1">Nov 2020 - May 2022</p>
-        </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">Atos</div>
-          <p class="my-1 font-light">PLM Consultant</p>
-          <p class="text-gray-500 my-1">Sep 2018 - Oct 2020</p>
-        </div>
-        
+        <button class="absolute right-0 z-10 p-2 shadow-md" onclick="scrollRight('work')">&#9654;</button>
       </div>
     </div>
 
     
     <div>
-      <div class="text-2xl font-semibold mb-4">Skills</div>
-      <div class="flex overflow-x-auto space-x-4">
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-light my-2">GitHub &amp; CI/CD</div>
+      <div class="text-2xl font-semibold mb-4">Skills & Tools</div>
+      <div class="relative flex items-center">
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('skills')">&#9664;</button>
+        <div id="skills" class="flex overflow-x-auto space-x-4 scrollbar-hide">
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/githubActions.png" alt="GitHub Image">
+            </div>
+            <div class="text-xl font-bold my-2">GitHub</div>
+            <p class="my-1 font-light text-sm" v-if=".description">Structur, Actions &amp; CI/CD</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/polarion.png" alt="Polarion Image">
+            </div>
+            <div class="text-xl font-bold my-2">Polarion</div>
+            <p class="my-1 font-light text-sm" v-if=".description">Tool and Process Expert</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/chatGPT.png" alt="GenAI Image">
+            </div>
+            <div class="text-xl font-bold my-2">GenAI</div>
+            <p class="my-1 font-light text-sm" v-if=".description">ChatGPT, Automation &amp; AI Agents</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/java.png" alt="Java Development Image">
+            </div>
+            <div class="text-xl font-bold my-2">Java Development</div>
+            <p class="my-1 font-light text-sm" v-if=".description">Servlets, Backends and Services</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/web-developer.png" alt="Web Development Image">
+            </div>
+            <div class="text-xl font-bold my-2">Web Development</div>
+            <p class="my-1 font-light text-sm" v-if=".description">From Basics to Frameworks</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/CI_CD.png" alt="DevOps Image">
+            </div>
+            <div class="text-xl font-bold my-2">DevOps</div>
+            <p class="my-1 font-light text-sm" v-if=".description">From Problem until Solution &amp; Doc</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/n8n.png" alt="n8n Image">
+            </div>
+            <div class="text-xl font-bold my-2">n8n</div>
+            <p class="my-1 font-light text-sm" v-if=".description">Building powerful AI Agents</p>
+          </div>
+          
         </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-light my-2">Polarion Tool and Process Expert</div>
-        </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-light my-2">GenAI, AI Assistent &amp; Automation</div>
-        </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-light my-2">Fullstack Development (Java &#43; Web)</div>
-        </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-light my-2">Interface development and connection</div>
-        </div>
-        
+        <button class="absolute right-0 z-10 p-2 shadow-md" onclick="scrollRight('skills')">&#9654;</button>
       </div>
     </div>
 
     
     <div>
       <div class="text-2xl font-semibold mb-4">Courses</div>
-      <div class="flex overflow-x-auto space-x-4">
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">Professional Scrum Master I</div>
-          <p class="my-1 font-light">by Scrum.org</p>
-          <p class="text-gray-500 my-1"></p>
+      <div class="relative flex items-center">
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('courses')">&#9664;</button>
+        <div id="courses" class="flex overflow-x-auto space-x-4 scrollbar-hide">
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/scrumMaster.png" alt="Professional Scrum Master I Image">
+            </div>
+            <div class="text-xl font-bold my-2">Professional Scrum Master I</div>
+            <p class="my-1 font-light text-sm">by Scrum.org</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/productOwner.png" alt="Professional Scrum Product Owner I Image">
+            </div>
+            <div class="text-xl font-bold my-2">Professional Scrum Product Owner I</div>
+            <p class="my-1 font-light text-sm">by Scrum.org</p>
+          </div>
+          
+          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+            <div class="image-container">
+              <img src="/images/itil.png" alt="ITIL Foundation certificate in IT Service Management Image">
+            </div>
+            <div class="text-xl font-bold my-2">ITIL Foundation certificate in IT Service Management</div>
+            <p class="my-1 font-light text-sm">by APMG International</p>
+          </div>
+          
         </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">Professional Scrum Product Owner I</div>
-          <p class="my-1 font-light">by Scrum.org</p>
-          <p class="text-gray-500 my-1"></p>
-        </div>
-        
-        <div class="flex-shrink-0 w-1/3 text-center">
-          <div class="text-xl font-bold my-2">ITIL Foundation certificate in IT Service Management</div>
-          <p class="my-1 font-light">by APMG International</p>
-          <p class="text-gray-500 my-1"></p>
-        </div>
-        
+        <button class="absolute right-0 z-10 p-2 shadow-md" onclick="scrollRight('courses')">&#9654;</button>
       </div>
     </div>
   </div>
-</section><section class="my-16 max-w-2xl mx-auto">
+</section>
+
+<script>
+  function scrollLeft(id) {
+    const container = document.getElementById(id);
+    const firstChildWidth = container.children[0]?.offsetWidth || 0;
+    container.scrollBy({ left: -firstChildWidth, behavior: 'smooth' });
+
+    
+    if (container.scrollLeft === 0) {
+      container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+    }
+  }
+
+  function scrollRight(id) {
+    const container = document.getElementById(id);
+    const firstChildWidth = container.children[0]?.offsetWidth || 0;
+    container.scrollBy({ left: firstChildWidth, behavior: 'smooth' });
+
+    
+    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    ['work', 'skills', 'courses'].forEach(id => {
+      const container = document.getElementById(id);
+      const items = container.children;
+      if (items.length <= 3) {
+        container.previousElementSibling.style.display = 'none'; 
+        container.nextElementSibling.style.display = 'none'; 
+      }
+    });
+  });
+</script>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+     
+    scrollbar-width: none;
+     
+  }
+
+  .image-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style><section class="my-16 max-w-2xl mx-auto">
   <div class="text-4xl font-bold text-center">
     Ready for the next step?
     <br />
