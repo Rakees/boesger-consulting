@@ -131,13 +131,14 @@
   }
 
   @media (max-width: 768px) {
-    .scrollbar-hide button {
+    .relative > button {
       display: none;
     }
 
-    .space-x-4>*+* {
+    #work > * + *,
+    #skills > * + *,
+    #courses > * + * {
       margin-left: 1rem;
-      /* Erhöht den Abstand auf mobilen Geräten */
     }
   }
 </style>
