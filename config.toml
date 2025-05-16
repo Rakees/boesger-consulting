@@ -16,7 +16,7 @@ title = "Bösger Consulting"
 [params.homepage]
   title = "Hey 👋 I'm Phillip"
   tagline = "Software Developer, Polarion Expert & AI Enthusiast"
-  description = "Bringing innovative solutions into your business."
+  description = "Bringing innovative solutions into your business"
   contact = "https://www.linkedin.com/in/phillip-boesger-90691215a/"
 
 [params.homepage.resume]
