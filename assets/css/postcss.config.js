@@ -22,5 +22,6 @@ module.exports = {
     require("autoprefixer")({
       path: [themeDir],
     }),
+    purgecss,
   ],
 };
