@@ -35,37 +35,37 @@ title = "Bösger Consulting"
 
 [[params.homepage.resume.skills]]
   name = "GitHub"
-  description = "Structur, Actions & CI/CD"
+  description = "structur, actions & CI/CD"
   image = "/images/githubActions.png"
 
 [[params.homepage.resume.skills]]
   name = "Polarion"
-  description = "Tool and Process Expert"
+  description = "tool and process expert"
   image = "/images/polarion.png"
 
 [[params.homepage.resume.skills]]
   name = "GenAI"
-  description = "ChatGPT, Automation & AI Agents"
+  description = "ChatGPT, automation & AI agents"
   image = "/images/chatGPT.png"
 
 [[params.homepage.resume.skills]]
   name = "Java Development"
-  description = "Servlets, Backends and Services"
+  description = "servlets, backends and services"
   image = "/images/java.png"
 
 [[params.homepage.resume.skills]]
   name = "Web Development"
-  description = "From Basics to Frameworks"
+  description = "From basics to frameworks"
   image = "/images/web-developer.png"
 
 [[params.homepage.resume.skills]]
   name = "DevOps"
-  description = "From Problem until Solution & Doc"
+  description = "From problem analysis to solution & documentation"
   image = "/images/CI_CD.png"
 
 [[params.homepage.resume.skills]]
   name = "n8n"
-  description = "Building powerful AI Agents"
+  description = "Building powerful AI agents"
   image = "/images/n8n.png"
 
 [[params.homepage.resume.courses]]
