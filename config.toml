@@ -79,7 +79,7 @@ title = "Bösger Consulting"
   image = "/images/productOwner.png"
 
 [[params.homepage.resume.courses]]
-  name = "ITIL Foundation certificate in IT Service Management"
+  name = "ITIL Foundation certificate"
   provider = "APMG International"
   image = "/images/itil.png"
 
