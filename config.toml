@@ -1,6 +1,6 @@
 theme = "showfolio"
 languageCode = "en-us"
-baseurl = "https://consulting.boesger.com"
+baseurl = "/"
 title = "Bösger Consulting"
 
 
