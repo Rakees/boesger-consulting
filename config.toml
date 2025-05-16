@@ -24,21 +24,25 @@ title = "Bösger Consulting"
 
 [[params.homepage.resume.work]]
   name = "avasis"
+  logo = "/images/avasis-logo.svg"
   role = "Senior Software Developer"
   duration = "Mar 2024 - Dez 2025"
 
 [[params.homepage.resume.work]]
   name = "avasis"
+  logo = "/images/avasis-logo.svg"
   role = "Technical Developement Lead Polarion"
   duration = "May 2022 - Mar 2024"
 
 [[params.homepage.resume.work]]
   name = "avasis"
+  logo = "/images/avasis-logo.svg"
   role = "ALM Consultant"
   duration = "Nov 2020 - May 2022"
 
 [[params.homepage.resume.work]]
   name = "Atos"
+  logo = "/images/atos-logo.jpg"
   role = "PLM Consultant"
   duration = "Sep 2018 - Oct 2020"
 
