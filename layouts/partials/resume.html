@@ -129,4 +129,15 @@
     max-height: 100%;
     object-fit: contain;
   }
+
+  @media (max-width: 768px) {
+    .scrollbar-hide button {
+      display: none;
+    }
+
+    .space-x-4>*+* {
+      margin-left: 1rem;
+      /* Erhöht den Abstand auf mobilen Geräten */
+    }
+  }
 </style>
