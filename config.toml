@@ -3,7 +3,6 @@ languageCode = "en-us"
 baseurl = "consulting.boesger.com"
 title = "Bösger Consulting"
 
-
 [params]
   name = "Bösger Consulting"
   description = "IT expert to take you further in the web and AI age"
@@ -94,3 +93,6 @@ title = "Bösger Consulting"
 [markup]
   [markup.highlight]
     style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

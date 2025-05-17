@@ -1,0 +1,72 @@
+---
+author: Phillip Bösger
+title: 👋 About Me
+date: 2025-05-17
+description:
+keywords: ["boesger", "about-us", "about-me", "contact"]
+type: about
+---
+
+<style>
+  .about-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .about-image-round {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block;
+    margin: 0 0 0 0 !important;
+  }
+  @media (max-width: 600px) {
+    .about-flex {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+</style>
+
+<div class="about-flex">
+  <img src="/images/about-image.jpg" alt="Phillip Bösgers Portrait" class="about-image-round">
+  <div style="display: flex; align-items: center;">
+    <span>
+      Hi, I'm <strong>Phillip</strong>, a passionate Senior Software Developer specializing in <strong>Polarion consulting and plugin development</strong>. With extensive expertise in Java, HTML, JavaScript, and Velocity, I provide tailored solutions to streamline development processes and enhance team productivity. <br> Since 2024, I've also intensified my focus on GitHub automations, leveraging AI in daily workflows, and optimizing processes using AI Agents.
+    </span>
+  </div>
+</div>
+
+## 🚀 Professional Skills
+
+* **Polarion ALM:** Deep expertise in consulting, plugin development, customization, and integration.
+* **Fullstack Development:** Extensive experience across front-end and back-end technologies, continuously exploring innovative approaches.
+* **GitHub & CI/CD Automation:** Skilled in building efficient workflows, automating processes, and ensuring continuous integration and delivery.
+* **AI & Automation:** Leveraging AI to create efficient automation solutions, from simple scripts to advanced AI agents—exploring and expanding my skills continually.
+
+## 🌍 Digital Nomad & Lifestyle
+
+I'm a digital nomad, traveling the globe while seamlessly integrating my passion for technology, sports, and photography. My lifestyle fuels creativity, meticulous planning, and sharp attention to detail, ensuring every project aligns with my motto:
+
+> "Nothing is impossible—it's only a question of time and budget."
+
+## 📸 Beyond Work
+
+Outside of coding and consulting, you'll find me capturing moments through photography—visit my photography website at [photography.boesger.com](https://photography.boesger.com)—engaging in various sports, or exploring new destinations around the world. I firmly believe in balancing professional dedication with personal growth and experiences.
+
+## 🎯 My Mission
+
+Delivering **high-quality, cost-effective solutions** tailored precisely to client needs. I'm committed to finding the optimal path to achieve your project's goals.
+
+---
+
+<section class="my-16 max-w-2xl mx-auto">
+  <div class="text-4xl font-bold text-center text-white">
+    Let's connect and build something great together!
+    <br />
+    <br />
+    <a class="text-5xl text-blue-400 hover:text-blue-600 no-underline" style="text-decoration: none; color: rgba(96,165,250,var(--tw-text-opacity));" href="mailto:{{< param authorEmail >}}">Let's chat 📨</a>
+  </div>
+</section>
