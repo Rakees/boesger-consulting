@@ -1,13 +1,15 @@
-<section class="my-4 max-w-5xl mx-auto">
-  <div class="space-y-8">
+<section class="my-4 mx-auto flex flex-col items-center">
+  <div class="space-y-8 w-full">
     <!-- Working Experience -->
     <div>
-      <div class="text-2xl font-semibold mb-4">Working Experience</div>
+      <div class="text-2xl font-semibold mb-4 text-center underline decoration-2 decoration-primary">Working Experience
+      </div>
       <div class="relative flex items-center">
         <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('work')">&#9664;</button>
-        <div id="work" class="flex overflow-x-auto space-x-4 scrollbar-hide w-full justify-center">
+        <div id="work"
+          class="flex overflow-x-auto space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-center">
           {{ range .Site.Params.homepage.resume.work }}
-          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+          <div class="flex-shrink-0 max-w-xs w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center">
             <div class="image-container">
               <img src="{{.logo}}" alt="{{.name}} Logo">
             </div>
@@ -24,12 +26,14 @@
 
     <!-- Skills -->
     <div>
-      <div class="text-2xl font-semibold mb-4">Skills & Tools</div>
+      <div class="text-2xl font-semibold mb-4 text-center underline decoration-2 decoration-primary">Skills & Tools
+      </div>
       <div class="relative flex items-center">
         <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('skills')">&#9664;</button>
-        <div id="skills" class="flex overflow-x-auto space-x-4 scrollbar-hide">
+        <div id="skills"
+          class="flex overflow-x-auto space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-center">
           {{ range .Site.Params.homepage.resume.skills }}
-          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+          <div class="flex-shrink-0 max-w-xs w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center">
             <div class="image-container">
               <img src="{{.image}}" alt="{{.name}} Image">
             </div>
@@ -44,12 +48,13 @@
 
     <!-- Courses -->
     <div>
-      <div class="text-2xl font-semibold mb-4">Courses</div>
+      <div class="text-2xl font-semibold mb-4 text-center underline decoration-2 decoration-primary">Courses</div>
       <div class="relative flex items-center">
         <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('courses')">&#9664;</button>
-        <div id="courses" class="flex overflow-x-auto space-x-4 scrollbar-hide">
+        <div id="courses"
+          class="flex overflow-x-auto space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-center">
           {{ range .Site.Params.homepage.resume.courses }}
-          <div class="flex-shrink-0 w-1/3 max-w-xs text-center">
+          <div class="flex-shrink-0 max-w-xs w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center">
             <div class="image-container">
               <img src="{{.image}}" alt="{{.name}} Image">
             </div>
@@ -87,16 +92,24 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function updateScrollButtons() {
     ['work', 'skills', 'courses'].forEach(id => {
       const container = document.getElementById(id);
-      const items = container.children;
-      if (items.length <= 3) {
-        container.previousElementSibling.style.display = 'none'; // Hide left button
-        container.nextElementSibling.style.display = 'none'; // Hide right button
+      if (!container) return;
+      const parent = container.parentElement;
+      const leftBtn = parent.querySelector('button[onclick*="scrollLeft"]');
+      const rightBtn = parent.querySelector('button[onclick*="scrollRight"]');
+      if (container.scrollWidth > container.clientWidth + 10) {
+        leftBtn.style.display = '';
+        rightBtn.style.display = '';
+      } else {
+        leftBtn.style.display = 'none';
+        rightBtn.style.display = 'none';
       }
     });
-  });
+  }
+  window.addEventListener('resize', updateScrollButtons);
+  document.addEventListener('DOMContentLoaded', updateScrollButtons);
 </script>
 
 <style>
@@ -131,13 +144,15 @@
   }
 
   @media (max-width: 768px) {
-    .relative > button {
+    .relative>button {
       display: none;
     }
 
     .image-container {
-      width: 80px; /* Noch kleinere Breite für sehr kleine Geräte */
-      height: 80px; /* Noch kleinere Höhe für sehr kleine Geräte */
+      width: 80px;
+      /* Noch kleinere Breite für sehr kleine Geräte */
+      height: 80px;
+      /* Noch kleinere Höhe für sehr kleine Geräte */
     }
   }
 </style>
