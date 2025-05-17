@@ -86,6 +86,27 @@
     const firstChildWidth = container.children[0]?.offsetWidth || 0;
     container.scrollBy({ left: firstChildWidth, behavior: 'smooth' });
   }
+
+  function updateScrollIcons() {
+    ['work', 'skills', 'courses'].forEach(id => {
+      const container = document.getElementById(id);
+      if (!container) return;
+      const leftBtn = container.parentElement.querySelector('button.absolute.left-0');
+      const rightBtn = container.parentElement.querySelector('button.absolute.right-0');
+      if (container.scrollWidth > container.clientWidth + 10) {
+        // Liste ist zu lang, Icons anzeigen
+        if (leftBtn) leftBtn.style.display = '';
+        if (rightBtn) rightBtn.style.display = '';
+      } else {
+        // Alles passt, Icons ausblenden
+        if (leftBtn) leftBtn.style.display = 'none';
+        if (rightBtn) rightBtn.style.display = 'none';
+      }
+    });
+  }
+
+  window.addEventListener('resize', updateScrollIcons);
+  document.addEventListener('DOMContentLoaded', updateScrollIcons);
 </script>
 
 <style>
