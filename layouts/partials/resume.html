@@ -6,7 +6,7 @@
         & Education
       </div>
       <div class="relative flex items-center">
-        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('work')">&#9664;</button>
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeftAction('work')">&#9664;</button>
         <div id="work"
           class="flex overflow-x-auto space-x-2 sm:space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-center md:justify-center">
           {{ range .Site.Params.homepage.resume.work }}
@@ -32,7 +32,7 @@
       <div class="text-2xl font-semibold mb-4 text-center underline decoration-2 decoration-primary">Skills & Tools
       </div>
       <div class="relative flex items-center">
-        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('skills')">&#9664;</button>
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeftAction('skills')">&#9664;</button>
         <div id="skills"
           class="flex overflow-x-auto space-x-2 sm:space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-center md:justify-center">
           {{ range .Site.Params.homepage.resume.skills }}
@@ -54,7 +54,7 @@
     <div>
       <div class="text-2xl font-semibold mb-4 text-center underline decoration-2 decoration-primary">Courses</div>
       <div class="relative flex items-center">
-        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('courses')">&#9664;</button>
+        <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeftAction('courses')">&#9664;</button>
         <div id="courses"
           class="flex overflow-x-auto space-x-2 sm:space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-center md:justify-center">
           {{ range .Site.Params.homepage.resume.courses }}
@@ -79,34 +79,13 @@
     const container = document.getElementById(id);
     const firstChildWidth = container.children[0]?.offsetWidth || 0;
     container.scrollBy({ left: -firstChildWidth, behavior: 'smooth' });
-
-    // If at the start, loop to the end
-    if (container.scrollLeft === 0) {
-      container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
-    }
   }
 
   function scrollRightAction(id) {
     const container = document.getElementById(id);
     const firstChildWidth = container.children[0]?.offsetWidth || 0;
     container.scrollBy({ left: firstChildWidth, behavior: 'smooth' });
-
-    // If at the end, loop to the start
-    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
-    }
   }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    ['work', 'skills', 'courses'].forEach(id => {
-      const container = document.getElementById(id);
-      const items = container.children;
-      if (items.length <= 3) {
-        container.previousElementSibling.style.display = 'none'; // Hide left button
-        container.nextElementSibling.style.display = 'none'; // Hide right button
-      }
-    });
-  });
 </script>
 
 <style>
