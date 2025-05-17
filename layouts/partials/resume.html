@@ -3,6 +3,7 @@
     <!-- Working Experience -->
     <div>
       <div class="text-2xl font-semibold mb-4 text-center underline decoration-2 decoration-primary">Working Experience
+        & Education
       </div>
       <div class="relative flex items-center">
         <button class="absolute left-0 z-10 p-2 shadow-md" onclick="scrollLeft('work')">&#9664;</button>
@@ -155,4 +156,12 @@
       /* Noch kleinere Höhe für sehr kleine Geräte */
     }
   }
+
+  /* Design-Tipp für weniger "erschlagende" Abschnitte:
+     - Wende für jeden Abschnitt (Working Experience, Skills, Courses) ein Card-Design an:
+       z.B. <div class="bg-white/80 dark:bg-gray-900/80 shadow-md rounded-xl p-6 mb-8">
+     - Reduziere die max-w auf z.B. max-w-3xl und zentriere die Cards (mx-auto).
+     - Füge kleine Icons oder Trennlinien (z.B. <hr class="my-8 w-1/2 mx-auto border-blue-200">) zwischen die Abschnitte ein.
+     - Nutze space-y-12 statt space-y-8 für mehr Luft, aber Cards sorgen dafür, dass die Seite nicht zu lang wirkt.
+  */
 </style>

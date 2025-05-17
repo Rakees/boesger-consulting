@@ -22,15 +22,28 @@ title = "Bösger Consulting"
   name = "avasis"
   logo = "/images/avasis-logo.svg"
   role = "Senior Software Developer"
-  role2 = "Technical Developement Lead Polarion"
-  role3 = "ALM Consultant"
+  role2 = "Technical Developement Lead Polarion / ALM Consultant"
   duration = "Nov 2020 - Dez 2025"
+
+[[params.homepage.resume.work]]
+  name = "M.Sc. in Computer Science"
+  logo = "/images/education.png"
+  role = "M.Sc. in Computer Science"
+  role2 = "part-time"
+  duration = "Sep 2020 - Mai 2022"
 
 [[params.homepage.resume.work]]
   name = "Atos"
   logo = "/images/atos-logo.png"
   role = "PLM Consultant"
   duration = "Sep 2018 - Oct 2020"
+
+[[params.homepage.resume.work]]
+  name = "B. Sc. in Computer Science"
+  logo = "/images/education.png"
+  role = "B. Sc. in Computer Science"
+  role2 = "in cooperation with Atos"
+  duration = "Sep 2015 - Sep 2018"
 
 [[params.homepage.resume.skills]]
   name = "GitHub"
