@@ -15,12 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function openModal(content) {
     document.getElementById('resume-modal-content').innerHTML = content;
+    // Verhindere Layout-Shift beim Ausblenden der Scrollbar
+    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    if (scrollBarWidth > 0) {
+      document.body.style.paddingRight = scrollBarWidth + 'px';
+    }
     modal.classList.remove('hidden');
     document.body.classList.add('overflow-hidden');
   }
   function closeModal() {
     modal.classList.add('hidden');
     document.body.classList.remove('overflow-hidden');
+    document.body.style.paddingRight = '';
   }
   modal.addEventListener('click', function (e) {
     if (e.target === modal) closeModal();
