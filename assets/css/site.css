@@ -10,46 +10,156 @@ body {
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  src: url("/fonts/inter-v3-latin-300.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/inter-v3-latin-300.eot");
+  /* IE9 Compat Modes */
   src: local(""),
     url("/fonts/inter-v3-latin-300.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/inter-v3-latin-300.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/inter-v3-latin-300.woff")
-      format("woff"),
-    /* Modern Browsers */ url("/fonts/inter-v3-latin-300.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("/fonts/inter-v3-latin-300.svg#Inter")
-      format("svg"); /* Legacy iOS */
+    /* IE6-IE8 */
+    url("/fonts/inter-v3-latin-300.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("/fonts/inter-v3-latin-300.woff") format("woff"),
+    /* Modern Browsers */
+    url("/fonts/inter-v3-latin-300.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("/fonts/inter-v3-latin-300.svg#Inter") format("svg");
+  /* Legacy iOS */
 }
+
 /* inter-500 - latin */
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/inter-v3-latin-500.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/inter-v3-latin-500.eot");
+  /* IE9 Compat Modes */
   src: local(""),
     url("/fonts/inter-v3-latin-500.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/inter-v3-latin-500.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/inter-v3-latin-500.woff")
-      format("woff"),
-    /* Modern Browsers */ url("/fonts/inter-v3-latin-500.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("/fonts/inter-v3-latin-500.svg#Inter")
-      format("svg"); /* Legacy iOS */
+    /* IE6-IE8 */
+    url("/fonts/inter-v3-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("/fonts/inter-v3-latin-500.woff") format("woff"),
+    /* Modern Browsers */
+    url("/fonts/inter-v3-latin-500.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("/fonts/inter-v3-latin-500.svg#Inter") format("svg");
+  /* Legacy iOS */
 }
+
 /* inter-700 - latin */
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/inter-v3-latin-700.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/inter-v3-latin-700.eot");
+  /* IE9 Compat Modes */
   src: local(""),
     url("/fonts/inter-v3-latin-700.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/inter-v3-latin-700.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/inter-v3-latin-700.woff")
-      format("woff"),
-    /* Modern Browsers */ url("/fonts/inter-v3-latin-700.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("/fonts/inter-v3-latin-700.svg#Inter")
-      format("svg"); /* Legacy iOS */
+    /* IE6-IE8 */
+    url("/fonts/inter-v3-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("/fonts/inter-v3-latin-700.woff") format("woff"),
+    /* Modern Browsers */
+    url("/fonts/inter-v3-latin-700.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("/fonts/inter-v3-latin-700.svg#Inter") format("svg");
+  /* Legacy iOS */
+}
+
+/* Popup Modal Optimierung */
+#resume-modal .max-w-2xl {
+  max-width: 900px;
+  width: 95vw;
+  max-height: 90vh;
+  height: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+#resume-modal-content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  box-sizing: border-box;
+  color: #18181b;
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #23272f;
+}
+
+#resume-modal-content ul {
+  list-style-type: disc;
+  margin-left: 1.5em;
+  padding-left: 0.5em;
+}
+
+#resume-modal-content li {
+  text-align: left;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  color: #18181b;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+#resume-modal-content ul li::marker {
+  color: #2563eb;
+  font-size: 1.1em;
+}
+
+#resume-modal-content::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+#resume-modal-content::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 6px;
+}
+
+#resume-modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  #resume-modal .max-w-2xl {
+    max-width: 100vw;
+    width: 100vw;
+    min-height: 30vh;
+    max-height: 75vh;
+    height: auto;
+    padding: 0.2rem;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+
+  #resume-modal-content {
+    font-size: 0.93rem;
+    padding: 0.1rem 0.05rem 0.1rem 0.05rem;
+    max-height: 65vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  #resume-modal-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  #resume-modal-content li {
+    font-size: 0.95em;
+    margin-bottom: 0.3em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #resume-modal-content {
+    color: #f3f4f6;
+  }
+
+  #resume-modal-content li {
+    color: #f3f4f6;
+  }
+
+  #resume-modal-content ul li::marker {
+    color: #f3f4f6;
+  }
 }

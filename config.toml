@@ -22,23 +22,23 @@ title = "Bösger Consulting"
   name = "avasis"
   logo = "/images/avasis-logo.svg"
   role = "Senior Software Developer"
-  role2 = "Technical Developement Lead Polarion / ALM Consultant"
-  details = "Test"
-  duration = "Nov 2020 - Dez 2025"
+  role2 = "Technical Development Lead Polarion & ALM Consultant"
+  details = "<section style=\"line-height:1.7;\"><div style=\"margin-bottom:1.5em;\"><h3 style=\"margin-bottom:0.2em;font-size:1.15em;font-weight:700;\">Senior Software Developer <span style=\"color:#888;font-weight:400;font-size:0.95em;\">(Mar 2024 - Dec 2025)</span></h3><ul style=\"margin-left:1.2em;\"><li>✨ Development of intuitive Polarion extensions <span style=\"color:#888;\">(Fullstack: Java & Web UI)</span></li><li>⚙️ Process automation via CI/CD <span style=\"color:#888;\">(GitHub, Maven, Jenkins)</span></li><li>🤝 Independent customer support & continuous improvement</li></ul></div><div style=\"margin-bottom:1.5em;\"><h3 style=\"margin-bottom:0.2em;font-size:1.08em;font-weight:600;\">Technical Development Lead Polarion & ALM Consultant <span style=\"color:#888;font-weight:400;font-size:0.93em;\">(May 2022 - Mar 2024)</span></h3><ul style=\"margin-left:1.2em;\"><li>🚀 Development & enhancement of Siemens Polarion extensions</li><li>📝 Feature design, implementation & release planning</li><li>🧩 Development of templates, widgets & plugins for complex use cases</li></ul></div><div><h3 style=\"margin-bottom:0.2em;font-size:1.05em;font-weight:600;\">ALM Consultant <span style=\"color:#888;font-weight:400;font-size:0.92em;\">(Nov 2020 - May 2022)</span></h3><ul style=\"margin-left:1.2em;\"><li>🔧 Customer-specific Polarion customizations <span style=\"color:#888;\">(Java, HTML, JS)</span></li><li>🏥 Digitalization of processes in the medical sector <span style=\"color:#888;\">(Requirements, risk management)</span></li><li>📈 Improvement of internal development structures (CI/CD)</li></ul></div></section>"
+  duration = "Nov 2020 - Dec 2025"
 
 [[params.homepage.resume.work]]
   name = "M.Sc. in Computer Science"
   logo = "/images/education.png"
   role = "M.Sc. in Computer Science"
   role2 = "part-time"
-  details = "Test"
+  details = "<strong>Master of Science in Computer Science</strong> at <strong>Technische Hochschule Nürnberg Georg Simon Ohm</strong><br><em>📍 Nuremberg, Germany &nbsp;|&nbsp; 2020 – 2022 &nbsp;|&nbsp; Grade: 1.6 &nbsp;|&nbsp; Part-time alongside professional work at avasis</em>"
   duration = "Sep 2020 - Mai 2022"
 
 [[params.homepage.resume.work]]
   name = "Atos"
   logo = "/images/atos-logo.png"
   role = "PLM Consultant"
-  details = "Test"
+  details = "<section style=\"line-height:1.7;\"><div><h3 style=\"margin-bottom:0.2em;font-size:1.15em;font-weight:700;\">PLM Consultant <span style=\"color:#888;font-weight:400;font-size:0.95em;\">(Sep 2018 - Oct 2020)</span></h3><ul style=\"margin-left:1.2em;\"><li>🔍 Consulting and customizing PLM systems for industrial customers</li><li>🛠️ Implementation of customer-specific software solutions <span style=\"color:#888;\">(Java, HTML, JavaScript)</span></li><li>📊 Supporting process optimization and digitalization initiatives</li><li>🤝 Close collaboration with clients to identify needs and define requirements</li></ul></div></section>"
   duration = "Sep 2018 - Oct 2020"
 
 [[params.homepage.resume.work]]
@@ -46,7 +46,7 @@ title = "Bösger Consulting"
   logo = "/images/education.png"
   role = "B. Sc. in Computer Science"
   role2 = "in cooperation with Atos"
-  details = "Test"
+  details = "<strong>Dual Student in Applied Computer Science</strong> at <strong>DHBW Mannheim</strong> (co-op with <strong>Atos</strong>)<br><em>&nbsp; Sep 2015 – Sep 2018 &nbsp;|&nbsp; Grade: 1.9</em><ul><li>📄 Created a proof-of-concept using Intelligent Capture OCR for automatic document recognition and integrated the extracted data into a database.</li><li>💻 Built an XML parser in C# to process large XML datasets and link them with Excel spreadsheets while ensuring high performance.</li><li>🧪 Oversaw test management in Polarion ALM, implemented UI-level test automation, and customized the system to meet customer requirements.</li><li>🎓 Completed a bachelor thesis on project organization in large Scrum projects using Polarion.</li></ul>"
   duration = "Sep 2015 - Sep 2018"
 
 [[params.homepage.resume.skills]]
