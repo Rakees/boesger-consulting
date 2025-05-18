@@ -1,6 +1,6 @@
 <section class="my-4 mx-auto flex flex-col items-center">
   <div class="space-y-8 w-full">
-    <!-- Working Experience -->
+    <!-- Working Experience & Education -->
     <div>
       <div class="text-2xl font-semibold mb-4 text-center underline decoration-2 decoration-primary">Working Experience
         & Education
@@ -10,8 +10,23 @@
         <div id="work"
           class="flex overflow-x-auto space-x-2 sm:space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-start">
           {{ range .Site.Params.homepage.resume.work }}
-          <div
-            class="flex-shrink-0 w-64 max-w-xs sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center resume-entry">
+          <div role="button" tabindex="0" aria-label="Mehr zu {{ .name }}"
+            class="flex-shrink-0 w-64 max-w-xs sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center resume-entry cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 rounded p-2 transition"
+            onclick="window.resumeModal(`<div class='flex flex-col items-center mb-4'>
+              <div class='image-container mb-2'><img src='{{.logo}}' alt='{{.name}} Logo'></div>
+              <p class='my-1 font-bold leading-tight text-base sm:text-lg md:text-xl lg:text-lg xl:text-base'>{{.role}}</p>
+              {{ if .role2 }}<p class='my-1 font-light text-sm'>{{.role2}}</p>{{ end }}
+              {{ if .role3 }}<p class='my-1 font-light text-sm'>{{.role3}}</p>{{ end }}
+              <p class='text-gray-500 my-1'>{{.duration}}</p>
+            </div>
+            <div>{{ .details | safeHTML }}</div>`);" onkeydown="if(event.key==='Enter'||event.key===' '){window.resumeModal(`<div class='flex flex-col items-center mb-4'>
+              <div class='image-container mb-2'><img src='{{.logo}}' alt='{{.name}} Logo'></div>
+              <p class='my-1 font-bold leading-tight text-base sm:text-lg md:text-xl lg:text-lg xl:text-base'>{{.role}}</p>
+              {{ if .role2 }}<p class='my-1 font-light text-sm'>{{.role2}}</p>{{ end }}
+              {{ if .role3 }}<p class='my-1 font-light text-sm'>{{.role3}}</p>{{ end }}
+              <p class='text-gray-500 my-1'>{{.duration}}</p>
+            </div>
+            <div>{{ .details | safeHTML }}</div>`);}">
             <div class="image-container">
               <img src="{{.logo}}" alt="{{.name}} Logo">
             </div>
@@ -36,7 +51,19 @@
         <div id="skills"
           class="flex overflow-x-auto space-x-2 sm:space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-start">
           {{ range .Site.Params.homepage.resume.skills }}
-          <div class="flex-shrink-0 w-64 max-w-xs sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center">
+          <div role="button" tabindex="0" aria-label="Mehr zu {{ .name }}"
+            class="flex-shrink-0 w-64 max-w-xs sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 rounded p-2 transition"
+            onclick="window.resumeModal(`<div class='flex flex-col items-center mb-4'>
+              <div class='image-container mb-2'><img src='{{.image}}' alt='{{.name}} Image'></div>
+              <div class='my-1 font-bold leading-tight text-base sm:text-lg md:text-xl lg:text-lg xl:text-base'>{{.name}}</div>
+              {{ if .description }}<p class='my-1 font-light text-sm leading-tight'>{{.description}}</p>{{ end }}
+            </div>
+            <div>{{ .details | safeHTML }}</div>`);" onkeydown="if(event.key==='Enter'||event.key===' '){window.resumeModal(`<div class='flex flex-col items-center mb-4'>
+              <div class='image-container mb-2'><img src='{{.image}}' alt='{{.name}} Image'></div>
+              <div class='my-1 font-bold leading-tight text-base sm:text-lg md:text-xl lg:text-lg xl:text-base'>{{.name}}</div>
+              {{ if .description }}<p class='my-1 font-light text-sm leading-tight'>{{.description}}</p>{{ end }}
+            </div>
+            <div>{{ .details | safeHTML }}</div>`);}">
             <div class="image-container">
               <img src="{{.image}}" alt="{{.name}} Image">
             </div>
@@ -58,13 +85,16 @@
         <div id="courses"
           class="flex overflow-x-auto space-x-2 sm:space-x-4 scrollbar-hide w-full mx-auto transition-all duration-300 justify-start">
           {{ range .Site.Params.homepage.resume.courses }}
-          <div class="flex-shrink-0 w-64 max-w-xs sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center">
+          <div
+            class="flex-shrink-0 w-64 max-w-xs sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 text-center cursor-default bg-gray-50 dark:bg-gray-900 rounded p-2 transition">
             <div class="image-container">
               <img src="{{.image}}" alt="{{.name}} Image">
             </div>
             <div class="my-1 font-bold leading-tight text-base sm:text-lg md:text-xl lg:text-lg xl:text-base">{{.name}}
             </div>
             <p class="my-1 font-light text-sm leading-tight">by {{.provider}}</p>
+            <p class="text-gray-500 my-1">{{.duration}}</p>
+            <div class="mt-2 text-sm text-left mx-auto max-w-xs">{{ .details | safeHTML }}</div>
           </div>
           {{ end }}
         </div>
@@ -73,6 +103,8 @@
     </div>
   </div>
 </section>
+
+<!-- Modal JS ist bereits in /assets/js/popup.js vorhanden und wird eingebunden. -->
 
 <script>
   function scrollLeftAction(id) {
@@ -104,7 +136,7 @@
 
       const leftBtn = container.parentElement.querySelector('button.absolute.left-0');
       const rightBtn = container.parentElement.querySelector('button.absolute.right-0');
-      
+
       if (container.scrollWidth > container.clientWidth + 10) {
         if (leftBtn) leftBtn.style.display = '';
         if (rightBtn) rightBtn.style.display = '';

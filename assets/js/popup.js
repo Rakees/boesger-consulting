@@ -1,0 +1,32 @@
+// Minimalist Modal Popup for Resume Section
+// Handles open/close and content injection
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.createElement('div');
+  modal.id = 'resume-modal';
+  modal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden';
+  modal.innerHTML = `
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg max-w-md w-full mx-4 p-6 relative animate-fade-in">
+      <button id="resume-modal-close" class="absolute top-2 right-2 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-2xl font-bold">&times;</button>
+      <div id="resume-modal-content" class="text-gray-900 dark:text-gray-100"></div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  function openModal(content) {
+    document.getElementById('resume-modal-content').innerHTML = content;
+    modal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+  }
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  }
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+  document.getElementById('resume-modal-close').onclick = closeModal;
+  window.resumeModal = openModal;
+});
+
+// Usage: window.resumeModal('<b>Title</b><br>Details...');
