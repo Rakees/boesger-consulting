@@ -51,44 +51,44 @@ title = "Bösger Consulting"
 
 [[params.homepage.resume.skills]]
   name = "GitHub"
-  description = "structur, actions & CI/CD"
-  details = "Test"
+  description = "Structur, Actions & CI/CD"
+  details = "<ul><li>🔗 Built modular GitHub workflows for automated builds, snapshot releases, and test server integration.</li><li>🚀 Led migration from SVN to GitHub and eliminated manual processes via automation.</li><li>🛠️ Developed and maintained a lightweight, fully documented GitHub-based toolchain.</li><li>📈 Standardized workflows, approval processes, and delivered practical team trainings.</li><li>🤖 Leveraged GitHub Copilot daily, automating any repetitive work for maximum efficiency.</li></ul>"
   image = "/images/githubActions.png"
 
 [[params.homepage.resume.skills]]
   name = "Polarion"
-  description = "tool and process expert"
-  details = "Test"
+  description = "Tool and Process Expert"
+  details = "<ul><li>💡 7+ years as Polarion developer, architect, and consultant—end-to-end from requirements to support.</li><li>🧩 Built all extension types: macros, widgets, connectors, data importers, logic layers, templates.</li><li>🛠️ Deep expertise in Polarion OOTB, configuration, and complex integrations.</li><li>📚 Delivered focused trainings on OOTB, APIs, and development best practices.</li><li>🚀 Always striving to improve solutions, quality, and maintainability in every project.</li></ul>"
   image = "/images/polarion.png"
 
 [[params.homepage.resume.skills]]
   name = "GenAI"
   description = "ChatGPT, automation & AI agents"
-  details = "Test"
+  details = "<ul><li>🌍 Comprehensive knowledge of AI models, vendors, and best-use scenarios.</li><li>🧠 Advanced prompt engineering and process optimization through AI tools.</li><li>🤖 Automated workflows using custom GPTs and OpenAI API integration.</li><li>🔗 Built end-to-end automation pipelines and AI agent networks for complex tasks.</li><li>🚀 Constantly exploring new AI tools and integrating them into daily routines.</li></ul>"
   image = "/images/chatGPT.png"
 
 [[params.homepage.resume.skills]]
   name = "Java Development"
-  description = "servlets, backends and services"
-  details = "Test"
+  description = "Servlets, Backends and Services"
+  details = "<ul><li>☕ 10+ years Java experience, mainly backend for web tools like Polarion.</li><li>🔄 Expert in Streams, Lambdas, and modular code for scalable, maintainable systems.</li><li>🧩 Focused on reducing complexity and promoting clean architecture in every project.</li><li>🖥️ Built standalone applications as needed, always solution- and impact-driven.</li><li>🌍 Quick to adapt to new languages—C#, Python, Swift—thanks to strong cross-language skills.</li></ul>"
   image = "/images/java.png"
 
 [[params.homepage.resume.skills]]
   name = "Web Development"
-  description = "From basics to frameworks"
-  details = "Test"
+  description = "from basics to frameworks"
+  details = "<ul><li>🌐 10+ years of web development: HTML, CSS, JavaScript, strong Vanilla JS expertise.</li><li>⚡ Built flexible solutions in constrained environments and with modern frameworks (Angular, React, Flutter).</li><li>🎨 Creative mindset, always aiming for both functional and visually appealing results.</li><li>🛠️ Skilled in SCSS, Tailwind, Bootstrap—tool selection tailored to project needs.</li><li>🚀 Fast learner, able to quickly ramp up on new frameworks and technologies.</li></ul>"
   image = "/images/web-developer.png"
 
 [[params.homepage.resume.skills]]
   name = "DevOps"
-  description = "From problem analysis to solution & documentation"
-  details = "Test"
+  description = "from problem analysis to solution & documentation"
+  details = "<ul><li>🔄 Managed the full DevOps lifecycle: requirements, CI/CD, automation, troubleshooting.</li><li>⚙️ Focused on in-house toolchains, with strong grasp of core DevOps processes.</li><li>🛠️ Automated builds, tests, and deployments for business-critical solutions.</li><li>🚀 Established team workflows and quality standards for stable, efficient delivery.</li><li>☁️ No deep experience with Azure or cloud DevOps, but strong process knowledge and adaptability.</li></ul>"
   image = "/images/CI_CD.png"
 
 [[params.homepage.resume.skills]]
   name = "n8n"
   description = "Building powerful AI agents"
-  details = "Test"
+  details = "<ul><li>🤖 Building n8n expertise since 2025, focusing on AI API integration and workflow automation.</li><li>📚 Completed courses on n8n, from basic chains to advanced AI agent networks.</li><li>🧠 Defined and optimized AI agents for robust, reliable outputs.</li><li>🔗 Strong understanding of AI agent collaboration and automation design.</li><li>🌐 Familiar with Make.com, Zapier, and ready to transfer best practices across platforms.</li></ul>"
   image = "/images/n8n.png"
 
 [[params.homepage.resume.courses]]

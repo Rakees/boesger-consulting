@@ -27,20 +27,23 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.classList.add('hidden');
   }
 
+  let scrollY = 0;
   function openModal(content) {
     document.getElementById('resume-modal-content').innerHTML = content;
-    // Verhindere Layout-Shift beim Ausblenden der Scrollbar
-    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
-    if (scrollBarWidth > 0) {
-      document.body.style.paddingRight = scrollBarWidth + 'px';
-    }
     modal.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
+    // Scroll-Lock ohne Scrollbar-Ausblendung
+    scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
   }
   function closeModal() {
     modal.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-    document.body.style.paddingRight = '';
+    // Scroll-Lock zurücksetzen
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollY);
   }
   modal.addEventListener('click', function (e) {
     if (e.target === modal) closeModal();
