@@ -16,6 +16,81 @@
       </a>
     </div>
 
+    <style>
+      @media (max-width: 700px) {
+        #nav-menu {
+          display: none !important;
+        }
+
+        #mobile-nav-btn {
+          display: flex !important;
+        }
+      }
+
+      @media (min-width: 701px) {
+
+        #mobile-nav-btn,
+        #mobile-nav-dropdown {
+          display: none !important;
+        }
+
+        #nav-menu {
+          display: flex !important;
+        }
+      }
+
+      #mobile-nav-dropdown {
+        position: absolute;
+        right: 1.5rem;
+        top: 3.5rem;
+        background: #e0f2fe;
+        border-radius: 0.8rem;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+        border: 1.5px solid #bae6fd;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        #mobile-nav-dropdown {
+          background: #172554;
+          border-color: #2563eb;
+        }
+      }
+
+      #mobile-nav-dropdown a {
+        display: block;
+        padding: 0.5rem 0.7rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        color: #0a2540;
+        text-decoration: none;
+      }
+
+      #mobile-nav-dropdown a:hover {
+        background: #bae6fd;
+        color: #2563eb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        #mobile-nav-dropdown a {
+          color: #f3f4f6;
+        }
+
+        #mobile-nav-dropdown a:hover {
+          background: #2563eb;
+          color: #fff;
+        }
+      }
+    </style>
+    <button id="mobile-nav-btn" aria-label="Open menu"
+      style="display:none;align-items:center;justify-content:center;background:none;border:none;padding:0.5rem 0.7rem;cursor:pointer;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
     <ul id="nav-menu" class="flex w-auto mt-0 space-x-2">
       <style>
         .nav-box {
@@ -57,5 +132,31 @@
       </li>
       {{ end }}
     </ul>
+    <div id="mobile-nav-dropdown" style="display:none;">
+      {{ with .Site.GetPage "/about" }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end }}
+      {{ with .Site.GetPage "/services" }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end }}
+    </div>
+    <script>
+      const btn = document.getElementById('mobile-nav-btn');
+      const dropdown = document.getElementById('mobile-nav-dropdown');
+      let open = false;
+      if (btn && dropdown) {
+        btn.onclick = function (e) {
+          e.stopPropagation();
+          open = !open;
+          dropdown.style.display = open ? 'block' : 'none';
+        };
+        document.addEventListener('click', function (e) {
+          if (open && !dropdown.contains(e.target) && e.target !== btn) {
+            dropdown.style.display = 'none';
+            open = false;
+          }
+        });
+      }
+    </script>
   </nav>
 </header>

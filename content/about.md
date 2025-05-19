@@ -29,6 +29,10 @@ type: about
       gap: 1rem;
     }
   }
+  @media (max-width: 700px) {
+    .cta-white, .text-4xl.text-center.text-white { font-size: 1.75rem !important; }
+    .cta-white a, .text-5xl.text-blue-400 { font-size: 2.25rem !important; }
+  }
 </style>
 
 <div class="about-flex">
