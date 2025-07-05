@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="modal-glass rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] mx-4 relative animate-fade-in overflow-hidden">
         <div class="flex justify-between items-center p-5 border-b border-white/15">
           <div class="flex-1"></div>
-          <button id="resume-modal-close" class="close-button w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 mr-2">&times;</button>
+          <button id="resume-modal-close" class="close-button w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 mr-4">&times;</button>
         </div>
         <div id="resume-modal-content" class="modal-content p-6 overflow-y-auto"></div>
       </div>
