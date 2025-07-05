@@ -104,13 +104,65 @@ description: "Overview of consulting, development, and training services."
     }
   }
   @media (max-width: 700px) {
-    .service-flex { flex-direction: column; gap: 1.2rem; }
-    .service-title { font-size: 1.05rem; }
-    .service-title-row { margin-bottom: 0.2rem; }
-    .service-icon { font-size: 1.7rem; }
-    h1, h1#title, h1.title, h1:first-child { font-size: 1.35rem !important; }
-    .cta-white { font-size: 1.75rem !important; }
-    .cta-white a { font-size: 2.25rem !important; }
+    .service-flex { 
+      flex-direction: column; 
+      gap: 1.2rem; 
+      margin: 0;
+      padding: 0;
+    }
+    .service-box {
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      min-width: unset;
+      flex: 1 1 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .service-title { 
+      font-size: 1.05rem; 
+      line-height: 1.3;
+    }
+    .service-title-row { 
+      margin-bottom: 0.5rem;
+      gap: 0.5rem;
+    }
+    .service-icon { 
+      font-size: 1.8rem;
+      margin-top: 0.1rem;
+    }
+    h1, h1#title, h1.title, h1:first-child { 
+      font-size: 1.35rem !important; 
+      padding: 0 1rem;
+    }
+    .cta-white { 
+      font-size: 1.75rem !important; 
+      padding: 0 1rem;
+    }
+    .cta-white a { 
+      font-size: 2.25rem !important; 
+    }
+  }
+  @media (max-width: 480px) {
+    .service-box {
+      padding: 1rem;
+      margin-bottom: 0.8rem;
+      border-radius: 1rem;
+    }
+    .service-title { 
+      font-size: 1rem; 
+    }
+    .service-icon { 
+      font-size: 1.6rem;
+    }
+    h1, h1#title, h1.title, h1:first-child { 
+      font-size: 1.2rem !important; 
+    }
+    .cta-white { 
+      font-size: 1.5rem !important; 
+    }
+    .cta-white a { 
+      font-size: 1.8rem !important; 
+    }
   }
   /* Titel auf dieser Seite ausblenden */
   h1.title, h1#title, h1:first-child {

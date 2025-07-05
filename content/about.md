@@ -19,6 +19,7 @@ type: about
     height: 200px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
+    object-position: center 20% !important;
     display: block;
     margin: 0 0 0 0 !important;
   }
@@ -27,6 +28,18 @@ type: about
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+    }
+    .about-image-round {
+      width: 160px !important;
+      height: 160px !important;
+      object-position: center 15% !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .about-image-round {
+      width: 140px !important;
+      height: 140px !important;
+      object-position: center 10% !important;
     }
   }
   @media (max-width: 700px) {
