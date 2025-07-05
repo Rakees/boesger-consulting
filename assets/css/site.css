@@ -69,13 +69,14 @@ body {
 
 /* Modal Glasmorphismus Styles */
 .modal-glass {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.12), 0 10px 40px rgba(0, 0, 0, 0.05);
   position: relative;
   display: flex;
   flex-direction: column;
+  border-radius: 1.5rem;
 }
 
 .modal-glass::before {
@@ -85,44 +86,56 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.02), transparent);
   transition: left 0.8s ease;
   pointer-events: none;
+  opacity: 0;
 }
 
 .modal-glass:hover::before {
   left: 100%;
+  opacity: 0;
 }
 
 .close-button {
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  font-size: 1.2rem;
-  font-weight: bold;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  font-size: 1.25rem;
+  font-weight: normal;
   cursor: pointer;
   z-index: 10;
   color: #6b7280;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .close-button:hover {
-  background: rgba(239, 68, 68, 0.9);
-  border-color: rgba(239, 68, 68, 0.3);
-  transform: scale(1.1);
-  color: white;
+  background: rgba(248, 250, 252, 0.95);
+  border-color: rgba(156, 163, 175, 0.4);
+  transform: scale(1.05);
+  color: #374151;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button:active {
+  transform: scale(0.95);
 }
 
 .modal-content {
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: #1f2937;
   max-height: calc(90vh - 120px);
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(37, 99, 235, 0.3) transparent;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 0.75rem;
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
   margin: 0;
   flex: 1;
 }
@@ -167,19 +180,26 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .modal-glass {
-    background: rgba(17, 24, 39, 0.95);
-    border-color: rgba(55, 65, 81, 0.5);
+    background: rgba(17, 24, 39, 0.98);
+    border-color: rgba(55, 65, 81, 0.6);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 10px 40px rgba(0, 0, 0, 0.15);
   }
   
   .close-button {
-    background: rgba(17, 24, 39, 0.8);
+    background: rgba(17, 24, 39, 0.9);
     border-color: rgba(55, 65, 81, 0.5);
     color: #f3f4f6;
+  }
+  
+  .close-button:hover {
+    background: rgba(31, 41, 55, 0.95);
+    border-color: rgba(75, 85, 99, 0.4);
+    color: #f9fafb;
   }
   
   .modal-content {
     color: #f3f4f6;
-    background: rgba(17, 24, 39, 0.8);
+    background: rgba(17, 24, 39, 0.6);
   }
   
   .modal-content li {
@@ -214,31 +234,42 @@ body {
 @media (min-width: 1024px) {
   .modal-glass {
     max-width: 42rem; /* 672px */
+    border-radius: 1.75rem;
   }
 }
 
 @media (max-width: 640px) {
   .modal-glass {
-    max-width: 90vw;
+    max-width: 92vw;
     margin: 0 1rem;
+    border-radius: 1.5rem;
   }
   
   .modal-content {
     font-size: 1rem;
     line-height: 1.6;
-    padding: 1rem;
+    padding: 1.2rem;
+    border-radius: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
   .modal-glass {
-    max-width: 95vw;
+    max-width: 96vw;
     margin: 0 0.5rem;
+    border-radius: 1.25rem;
   }
   
   .modal-content {
     font-size: 0.95rem;
-    padding: 0.8rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .close-button {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.1rem;
   }
 }
 
