@@ -114,6 +114,7 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  margin-right: 0.5rem;
 }
 
 .close-button::before {
@@ -276,10 +277,6 @@ body {
     padding: 1.2rem;
     border-radius: 0.75rem;
   }
-  
-  .close-button {
-    margin-right: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -299,7 +296,6 @@ body {
     width: 2rem;
     height: 2rem;
     font-size: 1.1rem;
-    margin-right: 0.75rem;
   }
 }
 
