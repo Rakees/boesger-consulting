@@ -72,6 +72,6 @@ Delivering **high-quality, cost-effective solutions** tailored precisely to clie
     Let's connect and build something great together!
     <br />
     <br />
-    <a class="text-5xl text-blue-400 hover:text-blue-600 no-underline" style="text-decoration: none; color: #60a5fa;" href="mailto:{{< param authorEmail >}}">Let's chat 📨</a>
+    <a class="contact-cta-link" href="mailto:{{< param authorEmail >}}">Let's chat 📨</a>
   </div>
 </section>

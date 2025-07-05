@@ -38,16 +38,70 @@ description: "Overview of consulting, development, and training services."
     align-items: center;
   }
   .service-box {
-    background: #f3f4f6;
-    border-radius: 1.2rem;
-    padding: 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     flex: 1 1 320px;
     min-width: 270px;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
+  
+  .service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+  
+  .service-box:hover::before {
+    left: 100%;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(37, 99, 235, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(37, 99, 235, 0.3);
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    margin-right: 0;
+    flex-shrink: 0;
+    line-height: 1.1;
+    margin-top: 0;
+    align-self: flex-start;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-box:hover .service-icon {
+    transform: scale(1.1);
+  }
+  
   @media (prefers-color-scheme: dark) {
-    .service-box { background: #23272f; color: #f3f4f6; }
+    .service-box {
+      background: rgba(17, 24, 39, 0.9);
+      border-color: rgba(55, 65, 81, 0.5);
+      color: #f3f4f6;
+    }
+    
+    .service-box:hover {
+      background: rgba(17, 24, 39, 0.95);
+      border-color: rgba(96, 165, 250, 0.4);
+      box-shadow: 0 16px 48px rgba(96, 165, 250, 0.1);
+    }
   }
   @media (max-width: 700px) {
     .service-flex { flex-direction: column; gap: 1.2rem; }
@@ -125,6 +179,6 @@ I offer a range of professional services to help your business succeed in the di
 <section class="my-16 max-w-2xl mx-auto">
   <div class="text-4xl font-bold text-center cta-white">
     For more details or a tailored offer, feel free to contact me directly<br /><br />
-    <a class="text-5xl text-blue-400 hover:text-blue-600 no-underline" style="text-decoration: none; color: #60a5fa;" href="mailto:consulting@boesger.com">Let's chat 📨</a>
+    <a class="contact-cta-link" href="mailto:consulting@boesger.com">Let's chat 📨</a>
   </div>
 </section>
