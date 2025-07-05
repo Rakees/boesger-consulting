@@ -59,10 +59,10 @@ type: about
 
 ## 🚀 Professional Skills
 
-* **Polarion ALM:** Deep expertise in consulting, plugin development, customization, and integration.
-* **Fullstack Development:** Extensive experience across front-end and back-end technologies, continuously exploring innovative approaches.
-* **GitHub & CI/CD Automation:** Skilled in building efficient workflows, automating processes, and ensuring continuous integration and delivery.
-* **AI & Automation:** Leveraging AI to create efficient automation solutions, from simple scripts to advanced AI agents—exploring and expanding my skills continually.
+- **Polarion ALM:** Deep expertise in consulting, plugin development, customization, and integration.
+- **Fullstack Development:** Extensive experience across front-end and back-end technologies, continuously exploring innovative approaches.
+- **GitHub & CI/CD Automation:** Skilled in building efficient workflows, automating processes, and ensuring continuous integration and delivery.
+- **AI & Automation:** Leveraging AI to create efficient automation solutions, from simple scripts to advanced AI agents—exploring and expanding my skills continually.
 
 ## 🌍 Digital Nomad & Lifestyle
 

@@ -210,6 +210,38 @@ body {
   }
 }
 
+/* Modal Responsive Styles */
+@media (min-width: 1024px) {
+  .modal-glass {
+    max-width: 42rem; /* 672px */
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-glass {
+    max-width: 90vw;
+    margin: 0 1rem;
+  }
+  
+  .modal-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-glass {
+    max-width: 95vw;
+    margin: 0 0.5rem;
+  }
+  
+  .modal-content {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}
+
 /* Modal Animations */
 @keyframes fade-in {
   from {

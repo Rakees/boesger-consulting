@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.id = 'resume-modal';
     modal.className = 'fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black bg-opacity-50 hidden modal-backdrop';
     modal.innerHTML = `
-      <div class="modal-glass rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] mx-4 relative animate-fade-in overflow-hidden">
+      <div class="modal-glass rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] mx-4 relative animate-fade-in overflow-hidden">
         <div class="flex justify-between items-center p-4 border-b border-white/20">
           <div class="flex-1"></div>
           <button id="resume-modal-close" class="close-button w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0">&times;</button>
