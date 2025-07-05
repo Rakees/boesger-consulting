@@ -223,6 +223,10 @@
           box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
           position: relative;
           overflow: hidden;
+          display: inline-block;
+          font-weight: 600;
+          text-decoration: none;
+          color: inherit;
         }
 
         .nav-box::before {
@@ -240,22 +244,13 @@
           left: 100%;
         }
 
-        .nav-box a {
-          font-weight: 600;
-          position: relative;
-          z-index: 1;
-          transition: color 0.3s ease;
-        }
-
         .nav-box:hover {
           background: rgba(59, 130, 246, 0.1);
           border-color: rgba(59, 130, 246, 0.3);
           transform: translateY(-2px);
           box-shadow: 0 8px 25px -5px rgba(59, 130, 246, 0.2);
-        }
-
-        .nav-box:hover a {
           color: #2563eb;
+          text-decoration: none;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -267,21 +262,18 @@
           .nav-box:hover {
             background: rgba(59, 130, 246, 0.2);
             border-color: rgba(59, 130, 246, 0.5);
-          }
-
-          .nav-box:hover a {
             color: #60a5fa;
           }
         }
       </style>
       {{ with .Site.GetPage "/about" }}
-      <li class="nav-box">
-        <a href="{{ .Permalink }}" class="hover:text-blue-800 dark:hover:text-blue-300">{{ .Title }}</a>
+      <li>
+        <a href="{{ .Permalink }}" class="nav-box hover:text-blue-800 dark:hover:text-blue-300">{{ .Title }}</a>
       </li>
       {{ end }}
       {{ with .Site.GetPage "/services" }}
-      <li class="nav-box">
-        <a href="{{ .Permalink }}" class="hover:text-blue-800 dark:hover:text-blue-300">{{ .Title }}</a>
+      <li>
+        <a href="{{ .Permalink }}" class="nav-box hover:text-blue-800 dark:hover:text-blue-300">{{ .Title }}</a>
       </li>
       {{ end }}
     </ul>

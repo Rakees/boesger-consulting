@@ -98,27 +98,46 @@ body {
 }
 
 .close-button {
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(16px);
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(229, 231, 235, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 1.25rem;
   font-weight: normal;
   cursor: pointer;
   z-index: 10;
   color: #6b7280;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.close-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.4s ease;
+  pointer-events: none;
+}
+
+.close-button:hover::before {
+  left: 100%;
 }
 
 .close-button:hover {
-  background: rgba(248, 250, 252, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   border-color: rgba(156, 163, 175, 0.4);
   transform: scale(1.05);
   color: #374151;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .close-button:active {
@@ -189,12 +208,18 @@ body {
     background: rgba(17, 24, 39, 0.9);
     border-color: rgba(55, 65, 81, 0.5);
     color: #f3f4f6;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-button::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   }
   
   .close-button:hover {
     background: rgba(31, 41, 55, 0.95);
     border-color: rgba(75, 85, 99, 0.4);
     color: #f9fafb;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   }
   
   .modal-content {
