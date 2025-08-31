@@ -1,6 +1,6 @@
-# Bösger Consulting – IT Solutions, Polarion & AI
+# Bösger Digital – IT Solutions, Polarion & AI
 
-Welcome to the repository of **Bösger Consulting** – the digital home of Phillip Bösger, Senior Software Developer, Polarion expert, and AI enthusiast.
+Welcome to the repository of **Bösger Digital** – the digital home of Phillip Bösger, Senior Software Developer, Polarion expert, and AI enthusiast.
 
 ## 🚀 About this Website
 

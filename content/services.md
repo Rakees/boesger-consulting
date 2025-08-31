@@ -231,6 +231,6 @@ I offer a range of professional services to help your business succeed in the di
 <section class="my-16 max-w-2xl mx-auto">
   <div class="text-4xl font-bold text-center cta-white">
     For more details or a tailored offer, feel free to contact me directly<br /><br />
-    <a class="contact-cta-link" href="mailto:consulting@boesger.com">Let's chat 📨</a>
+  <a class="contact-cta-link" href="mailto:consulting@boesger.com">Let's chat 📨</a>
   </div>
 </section>

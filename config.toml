@@ -1,10 +1,10 @@
 theme = "showfolio"
 languageCode = "en-us"
-baseurl = "consulting.boesger.com"
-title = "Bösger Consulting"
+baseurl = "https://consulting.boesger.com/"
+title = "Bösger Digital"
 
 [params]
-  name = "Bösger Consulting"
+  name = "Bösger Digital"
   description = "IT expert to take you further in the web and AI age"
   author = "Phillip Bösger"
   authorEmail = "consulting@boesger.com"
@@ -17,6 +17,14 @@ title = "Bösger Consulting"
   tagline = "Software Developer, Polarion Expert & AI Enthusiast"
   description = "Bringing innovative solutions & processes into your business"
   contact = "https://www.linkedin.com/in/phillip-boesger-90691215a/"
+
+[[params.homepage.resume.work]]
+  name = "Bösger Digital"
+  logo = "/images/boesger-digital.png"
+  role = "Self-employed / Freelancer"
+  role2 = "Polarion, Full‑Stack & AI Consultant"
+  details = "<section style=\"line-height:1.7;\"><div><h3 style=\"margin-bottom:0.2em;font-size:1.15em;font-weight:700;\">Self-employed / Freelancer <span style=\"color:#888;font-weight:400;font-size:0.95em;\">(Jan 2026 - Present)</span></h3><ul style=\"margin-left:1.2em;\"><li>🧭 Independent consulting with focus on <strong>Polarion ALM</strong> and <strong>full‑stack development</strong> (Java, HTML, JS)</li><li>🤖 Enablement for companies, developers and users: <strong>AI understanding, strategy and training</strong></li><li>⚙️ Building <strong>CI/CD pipelines</strong> (GitHub Actions, Maven, Jenkins) and <strong>n8n automations</strong></li><li>🧩 Design and implementation of AI agent workflows to modernize processes</li><li>🚀 End‑to‑end delivery, pragmatic solutions, knowledge transfer</li></ul></div></section>"
+  duration = "Jan 2026 - Present"
 
 [[params.homepage.resume.work]]
   name = "avasis"
@@ -105,6 +113,11 @@ title = "Bösger Consulting"
   name = "ITIL Foundation certificate"
   provider = "APMG International"
   image = "/images/itil.png"
+
+[[params.homepage.resume.courses]]
+  name = "AI Automation: Build LLM Apps & AI Agents with n8n & APIs"
+  provider = "Udemy"
+  image = "/images/n8n.png"
 
 [params.homepage.social]
   linkedin = "https://www.linkedin.com/in/phillip-boesger-90691215a/"

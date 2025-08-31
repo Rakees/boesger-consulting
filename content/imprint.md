@@ -6,10 +6,10 @@ description: "Legal information and contact details for this website."
 This website is operated by:
 
 **Phillip Bösger**  
-Digital Nomad, IT Consultant & Developer  
+Digital Nomad, IT Consultant & Developer
 
 **Contact:**  
-E-Mail: consulting@boesger.com  
+E-Mail: consulting@boesger.com
 
 ---
 
